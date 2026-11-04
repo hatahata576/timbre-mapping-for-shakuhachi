@@ -1,6 +1,3 @@
-#録音した音声をエンコーダを通して順次プロット3-4
-#Tkinter版を利用して、Qt版に修正
-
 import os
 import librosa
 import numpy as np
@@ -9,7 +6,7 @@ import torch
 import torch.nn as nn
 import pickle, joblib
 import matplotlib
-matplotlib.use('Qt5Agg')  # 追加：Qt5Aggバックエンドを使用
+matplotlib.use('Qt5Agg')
 import matplotlib.pyplot as plt
 import time
 from IPython.display import clear_output, display
@@ -114,7 +111,6 @@ def get_latest_segment():
 
 
 #波形を読み込み、セグメント長に切り出す関数
-
 def load_mono(path, sr=SR):
     x, _ = librosa.load(path, sr=sr, mono=True)
     x = librosa.util.normalize(x)
@@ -135,7 +131,6 @@ def extract_f0(x):
     return f0
 
 #スペクトログラムに変換の関数定義
-
 def stft_mel(x):
     S_mel = librosa.feature.melspectrogram(
     y=x, sr=SR,
@@ -143,7 +138,7 @@ def stft_mel(x):
     hop_length=HOP,
     win_length=N_FFT,
     window="hann",
-    n_mels=256,      # メルバンド数（アプリに合わせて調整）
+    n_mels=256,
     fmin=0,
     fmax=SR/2
     )
@@ -151,16 +146,15 @@ def stft_mel(x):
     return log_mel.astype(np.float32)
 
 #エンコーダ定義
-
 class Encoder(nn.Module):
     def __init__(self, latent_d=LATENT_D, n_bands=5,
                  fb_fmin=100.0, fb_fmax=None):
         super().__init__()
         self.n_bands = n_bands
         self.conv = nn.Sequential(
-            nn.Conv2d(1,  32, kernel_size=(5,5), padding=(2,2)), nn.ReLU(), #(batch, 1, 104, 256) -> (batch, 32, 104, 128)
-            nn.Conv2d(32, 64, kernel_size=(5,5), padding=(2,2)), nn.ReLU(), #(batch, 64, 104, 64)
-            nn.Conv2d(64,128, kernel_size=(3,3), padding=(1,1)), nn.ReLU(), #(batch, 128, 104, 32)
+            nn.Conv2d(1,  32, kernel_size=(5,5), padding=(2,2)), nn.ReLU(),
+            nn.Conv2d(32, 64, kernel_size=(5,5), padding=(2,2)), nn.ReLU(),
+            nn.Conv2d(64,128, kernel_size=(3,3), padding=(1,1)), nn.ReLU(),
         )
 
         # μ / logvar を各時刻で出力
@@ -202,7 +196,6 @@ dat = np.load(NPZ_PATH, allow_pickle=True)
 Z  = dat["Z"]      # (N, latent)
 Z2 = dat["Z2"]     # (N, 2)
 Y  = dat["y_labels"]      # (N,)
-colors = dat["colors"]  # HEX 文字列: ["#1f77b4", "#ff7f0e", ...]
 colors = ["#ff0000", "#ffdddd", "#ff7777"]
 # --- Figure を作成（1つだけ使う） ---
 fig, ax = plt.subplots(figsize=(6,5))
