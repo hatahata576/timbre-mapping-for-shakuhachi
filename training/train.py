@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import torch
 import torch.nn.functional as Fnn
 from tqdm import tqdm
