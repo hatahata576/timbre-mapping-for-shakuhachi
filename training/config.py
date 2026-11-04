@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # 音響設定
 SR = 44100
 N_FFT = 2048
@@ -15,11 +13,10 @@ LATENT_D = 16
 MEL_BINS = 256
 
 # データ・モデル保存先
-
-CACHE_PKL = "/content/drive/MyDrive/お試し版/dataset_me20251230_mel.pkl"  # 学習用データ(pkl)
-PCA_PATH = "/content/drive/MyDrive/お試し版/自分の音声_20251230/20251230.pca"   # PCAモデル
-BEST_PATH = "/content/drive/MyDrive/お試し版/result/20251230.pt"  # 学習済みモデル
-NPZ_PATH = "/content/drive/MyDrive/お試し版/result/20251230.npz"   # 潜在空間データ(npz)
+CACHE_PKL = "~.pkl"  # 学習用データ(pkl)
+PCA_PATH = "~.pca"   # PCAモデル保存先
+BEST_PATH = "~.pt"  # 学習済みモデル保存先
+NPZ_PATH = "~.npz"   # 潜在空間データ(npz)保存先
 
 # 学習設定
 BATCH_SIZE = 16
