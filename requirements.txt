@@ -1,0 +1,90 @@
+absl-py==2.3.1
+asttokens==3.0.1
+astunparse==1.6.3
+audioread==3.1.0
+certifi==2025.11.12
+cffi==2.0.0
+charset-normalizer==3.4.4
+contourpy==1.3.3
+cycler @ file:///tmp/build/80754af9/cycler_1637851556182/work
+decorator==5.2.1
+executing==2.2.1
+filelock==3.20.0
+flatbuffers==25.9.23
+fonttools @ file:///opt/miniconda3/conda-bld/fonttools_1759754873557/work
+fsspec==2025.10.0
+gast==0.6.0
+google-pasta==0.2.0
+grpcio==1.76.0
+h5py==3.15.1
+idna==3.11
+ipython==9.7.0
+ipython_pygments_lexers==1.1.1
+jedi==0.19.2
+Jinja2==3.1.6
+joblib==1.5.2
+keras==3.12.0
+kiwisolver @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_cc2l_z_0ri/croot/kiwisolver_1737039586949/work
+lazy_loader==0.4
+libclang==18.1.1
+librosa==0.11.0
+llvmlite==0.45.1
+Markdown==3.10
+markdown-it-py==4.0.0
+MarkupSafe==3.0.3
+matplotlib==3.10.6
+matplotlib-inline==0.2.1
+mdurl==0.1.2
+ml_dtypes==0.5.4
+mpmath==1.3.0
+msgpack==1.1.2
+namex==0.1.0
+networkx==3.5
+numba==0.62.1
+numpy @ file:///opt/miniconda3/conda-bld/numpy_and_numpy_base_1762528496274/work/dist/numpy-2.3.4-cp311-cp311-macosx_12_0_arm64.whl#sha256=0a2b103b89c29fb13f6cfa1b0b4c69aa148f14f86d337750cd91f18b8e073925
+opt_einsum==3.4.0
+optree==0.18.0
+packaging @ file:///opt/miniconda3/conda-bld/packaging_1761049079066/work
+parso==0.8.5
+pexpect==4.9.0
+pillow @ file:///Users/runner/miniforge3/conda-bld/bld/rattler-build_pillow_1761655970/work
+platformdirs==4.5.0
+ply @ file:///home/conda/feedstock_root/build_artifacts/ply_1733239724146/work
+pooch==1.8.2
+prompt_toolkit==3.0.52
+protobuf==6.33.1
+ptyprocess==0.7.0
+pure_eval==0.2.3
+pycparser==2.23
+Pygments==2.19.2
+pyparsing==3.2.5
+PyQt5==5.15.11
+PyQt5_sip==12.17.0
+python-dateutil @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_66ud1l42_h/croot/python-dateutil_1716495741162/work
+requests==2.32.5
+rich==14.2.0
+scikit-learn==1.7.2
+scipy==1.16.3
+sip @ file:///Users/runner/miniforge3/conda-bld/sip_1762507182214/work
+six @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_03myqm7p6o/croot/six_1744271511946/work
+sounddevice==0.5.3
+soundfile==0.13.1
+soxr==1.0.0
+stack-data==0.6.3
+sympy==1.14.0
+tensorboard==2.20.0
+tensorboard-data-server==0.7.2
+tensorflow==2.20.0
+termcolor==3.2.0
+threadpoolctl==3.6.0
+toml @ file:///home/conda/feedstock_root/build_artifacts/toml_1763034582148/work
+tomli @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_tomli_1760014679/work
+torch==2.9.1
+tornado @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_63s3osc0_1/croot/tornado_1748956943583/work
+tqdm @ file:///Users/ec2-user/croot/tqdm_1771398704499/work
+traitlets==5.14.3
+typing_extensions==4.15.0
+urllib3==2.5.0
+wcwidth==0.2.14
+Werkzeug==3.1.3
+wrapt==2.0.1
